@@ -1,0 +1,947 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f7f5ff;
+  color: #211a35;
+}
+
+.app {
+  min-height: 100vh;
+}
+
+
+/* NAVBAR */
+
+.navbar {
+  height: 75px;
+  padding: 0 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: white;
+  box-shadow: 0 2px 15px rgba(0, 0, 0, 0.08);
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  color: #6c3fc7;
+}
+
+.nav-links {
+  display: flex;
+  gap: 28px;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: #3d374d;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.nav-links a:hover {
+  color: #6c3fc7;
+}
+
+.login-btn {
+  text-decoration: none;
+  background: #6c3fc7;
+  color: white;
+  padding: 11px 25px;
+  border-radius: 25px;
+  font-size: 15px;
+}
+
+
+/* HERO */
+
+.hero {
+  min-height: 590px;
+  padding: 80px 7%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  background: linear-gradient(135deg, #faf8ff, #eee7ff);
+}
+
+.hero-text {
+  max-width: 620px;
+}
+
+.welcome,
+.section-label {
+  color: #6c3fc7;
+  font-size: 13px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  margin-bottom: 18px;
+}
+
+.hero h1 {
+  font-size: 58px;
+  line-height: 1.1;
+  margin-bottom: 22px;
+}
+
+.hero h1 span {
+  color: #6c3fc7;
+}
+
+.description {
+  font-size: 18px;
+  line-height: 1.7;
+  color: #655f72;
+  margin-bottom: 30px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.primary-btn,
+.secondary-btn {
+  padding: 14px 30px;
+  border-radius: 30px;
+  font-size: 16px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.primary-btn {
+  background: #6c3fc7;
+  color: white;
+}
+
+.secondary-btn {
+  border: 2px solid #6c3fc7;
+  background: white;
+  color: #6c3fc7;
+}
+
+
+/* HERO CARD */
+
+.hero-card {
+  width: 350px;
+  padding: 50px 35px;
+  text-align: center;
+  background: white;
+  border-radius: 28px;
+  box-shadow: 0 20px 45px rgba(70, 40, 120, 0.16);
+}
+
+.shield {
+  width: 115px;
+  height: 115px;
+  margin: 0 auto 25px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee5ff;
+  border-radius: 50%;
+  font-size: 58px;
+}
+
+.hero-card h2 {
+  margin-bottom: 15px;
+  color: #4d2c91;
+  font-size: 25px;
+}
+
+.hero-card p {
+  color: #716b7d;
+  line-height: 1.7;
+}
+
+
+/* LEARN */
+
+.features {
+  padding: 85px 7%;
+  text-align: center;
+  background: white;
+}
+
+.features h2,
+.tools-section h2,
+.emergency-section h2,
+.about h2 {
+  font-size: 35px;
+  margin-bottom: 20px;
+  color: #302642;
+}
+
+.learn-intro {
+  color: #716b7d;
+  margin-bottom: 40px;
+  font-size: 16px;
+}
+
+.feature-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  width: 300px;
+  padding: 35px 25px;
+  border-radius: 22px;
+  background: #f8f5ff;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.feature-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 30px rgba(70, 40, 120, 0.14);
+}
+
+.icon {
+  font-size: 45px;
+  margin-bottom: 18px;
+}
+
+.feature-card h3 {
+  margin-bottom: 13px;
+  color: #4d2c91;
+  font-size: 20px;
+}
+
+.feature-card > p {
+  color: #716b7d;
+  line-height: 1.6;
+  margin-bottom: 18px;
+}
+
+.learn-btn {
+  border: none;
+  background: #6c3fc7;
+  color: white;
+  padding: 9px 18px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 13px;
+}
+
+.learn-btn:hover {
+  background: #542da4;
+}
+
+.learn-details {
+  margin-top: 20px;
+  padding: 18px;
+  background: white;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.learn-details h4 {
+  color: #4d2c91;
+  margin-bottom: 12px;
+}
+
+.learn-details p {
+  color: #716b7d;
+  font-size: 13px;
+  line-height: 1.5;
+  margin-bottom: 8px;
+}
+
+
+/* REPORT THREATS */
+
+.report-card {
+  border: 2px solid transparent;
+}
+
+.report-card:hover {
+  border-color: #6c3fc7;
+}
+
+.report-form {
+  width: 650px;
+  max-width: 100%;
+  margin: 35px auto 0;
+  padding: 40px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(60, 35, 110, 0.10);
+}
+
+.report-icon {
+  width: 75px;
+  height: 75px;
+  margin: 0 auto 18px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee5ff;
+  border-radius: 50%;
+  font-size: 38px;
+}
+
+.report-form h2 {
+  color: #302642;
+  margin-bottom: 10px;
+}
+
+.report-form > p {
+  color: #716b7d;
+  margin-bottom: 25px;
+}
+
+.report-form input,
+.report-form select,
+.report-form textarea {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd5ee;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+  font-family: Arial, sans-serif;
+}
+
+.report-form input:focus,
+.report-form select:focus,
+.report-form textarea:focus {
+  border-color: #6c3fc7;
+}
+
+.report-form textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+.report-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #6c3fc7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.report-submit:hover {
+  background: #542da4;
+}
+
+.report-message {
+  margin-top: 20px;
+  padding: 15px;
+  background: #f0ebff;
+  color: #4d2c91;
+  border-radius: 10px;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+/* TOOLS */
+
+.tools-section {
+  padding: 85px 7%;
+  text-align: center;
+  background: #f7f3ff;
+}
+
+.tool-icon {
+  font-size: 45px;
+}
+
+.tool-btn {
+  border: none;
+  background: #6c3fc7;
+  color: white;
+  padding: 11px 24px;
+  border-radius: 22px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.tool-btn:hover {
+  background: #542da4;
+}
+
+
+/* THREAT CHECKER */
+
+.threat-checker {
+  width: 650px;
+  max-width: 100%;
+  margin: 0 auto;
+  padding: 40px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(60, 35, 110, 0.10);
+}
+
+.threat-checker h3,
+.password-checker h3,
+.scam-card h3 {
+  margin: 18px 0 10px;
+  color: #4d2c91;
+}
+
+.threat-checker p,
+.password-checker > p,
+.scam-card p {
+  color: #716b7d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.threat-input {
+  width: 100%;
+  min-height: 130px;
+  padding: 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd5ee;
+  border-radius: 12px;
+  resize: vertical;
+  outline: none;
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+}
+
+.threat-input:focus {
+  border-color: #6c3fc7;
+}
+
+.threat-result {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f0ebff;
+  border-radius: 12px;
+  color: #4d2c91;
+  font-size: 14px;
+  line-height: 1.6;
+  text-align: left;
+}
+
+
+/* PASSWORD */
+
+.password-checker {
+  width: 650px;
+  max-width: 100%;
+  margin: 35px auto 0;
+  padding: 40px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(60, 35, 110, 0.10);
+}
+
+.password-input {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 18px;
+  border: 1px solid #ddd5ee;
+  border-radius: 12px;
+  outline: none;
+  font-size: 15px;
+}
+
+.password-input:focus {
+  border-color: #6c3fc7;
+}
+
+.password-result {
+  margin-top: 20px;
+  padding: 16px;
+  background: #f0ebff;
+  border-radius: 12px;
+  color: #4d2c91;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.password-tips {
+  margin-top: 25px;
+  padding: 20px;
+  background: #f8f5ff;
+  border-radius: 15px;
+  text-align: left;
+}
+
+.password-tips h4 {
+  color: #4d2c91;
+  margin-bottom: 12px;
+}
+
+.password-tips p {
+  color: #716b7d;
+  font-size: 14px;
+  margin-bottom: 8px;
+}
+
+
+/* SCAM AWARENESS */
+
+.scam-card {
+  width: 650px;
+  max-width: 100%;
+  margin: 35px auto 0;
+  padding: 40px;
+  background: white;
+  border-radius: 25px;
+  box-shadow: 0 10px 30px rgba(60, 35, 110, 0.10);
+}
+
+.scam-container {
+  max-width: 1000px;
+  margin: 35px auto 0;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 22px;
+}
+
+.scam-topic {
+  padding: 28px 22px;
+  background: white;
+  border-radius: 20px;
+  text-align: left;
+  box-shadow: 0 8px 25px rgba(60, 35, 110, 0.08);
+}
+
+.scam-icon {
+  font-size: 38px;
+  margin-bottom: 12px;
+}
+
+.scam-topic h3 {
+  color: #4d2c91;
+  margin-bottom: 10px;
+}
+
+.scam-topic p {
+  color: #716b7d;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+.scam-topic strong {
+  display: block;
+  color: #6c3fc7;
+  margin-bottom: 5px;
+  font-size: 14px;
+}
+
+.scam-topic span {
+  display: block;
+  color: #716b7d;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+
+/* EMERGENCY */
+
+.emergency-section {
+  padding: 85px 7%;
+  text-align: center;
+  background: white;
+}
+
+.emergency-intro {
+  max-width: 650px;
+  margin: 0 auto 40px;
+  color: #716b7d;
+  line-height: 1.7;
+}
+
+.emergency-container {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap;
+}
+
+.emergency-card {
+  width: 300px;
+  padding: 32px 25px;
+  background: #f8f5ff;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(60, 35, 110, 0.10);
+  transition: 0.3s;
+}
+
+.emergency-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 14px 32px rgba(60, 35, 110, 0.14);
+}
+
+.emergency-icon {
+  font-size: 45px;
+  margin-bottom: 15px;
+}
+
+.emergency-card h3 {
+  color: #4d2c91;
+  margin-bottom: 12px;
+}
+
+.emergency-card p {
+  color: #716b7d;
+  line-height: 1.6;
+  margin-bottom: 20px;
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 11px 20px;
+  background: #6c3fc7;
+  color: white;
+  text-decoration: none;
+  border-radius: 22px;
+  font-size: 14px;
+}
+
+.contact-btn:hover {
+  background: #542da4;
+}
+
+
+/* LANGUAGE */
+
+.language-box,
+.contacts-box {
+  max-width: 650px;
+  margin: 35px auto 0;
+  padding: 30px;
+  background: #f8f5ff;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(60, 35, 110, 0.08);
+}
+
+.language-box h3,
+.contacts-box h3 {
+  color: #4d2c91;
+  margin-bottom: 18px;
+}
+
+.language-select {
+  width: 100%;
+  padding: 13px;
+  border: 1px solid #ddd5ee;
+  border-radius: 10px;
+  font-size: 15px;
+  outline: none;
+  margin-bottom: 15px;
+  background: white;
+}
+
+.language-select:focus {
+  border-color: #6c3fc7;
+}
+
+.language-box p {
+  color: #716b7d;
+  font-size: 14px;
+  margin-bottom: 7px;
+}
+
+
+/* CONTACTS */
+
+.contact-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  text-align: left;
+}
+
+.contact-list div {
+  padding: 15px;
+  background: white;
+  border-radius: 12px;
+}
+
+.contact-list strong {
+  display: block;
+  color: #4d2c91;
+  margin-bottom: 5px;
+}
+
+.contact-list span {
+  color: #716b7d;
+  font-size: 14px;
+}
+
+
+/* LOGIN */
+
+.login-section {
+  padding: 90px 7%;
+  background: linear-gradient(135deg, #eee7ff, #faf8ff);
+  display: flex;
+  justify-content: center;
+}
+
+.login-box {
+  width: 400px;
+  padding: 45px;
+  background: white;
+  border-radius: 25px;
+  text-align: center;
+  box-shadow: 0 15px 40px rgba(70, 40, 120, 0.13);
+}
+
+.login-icon {
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #eee5ff;
+  border-radius: 50%;
+  font-size: 38px;
+}
+
+.login-box h2 {
+  color: #302642;
+  margin-bottom: 10px;
+}
+
+.login-box > p {
+  color: #716b7d;
+  margin-bottom: 25px;
+  line-height: 1.5;
+}
+
+.login-box input {
+  width: 100%;
+  padding: 14px;
+  margin-bottom: 15px;
+  border: 1px solid #ddd5ee;
+  border-radius: 10px;
+  outline: none;
+  font-size: 15px;
+}
+
+.login-box input:focus {
+  border-color: #6c3fc7;
+}
+
+.login-submit {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: #6c3fc7;
+  color: white;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.login-submit:hover {
+  background: #542da4;
+}
+
+.login-message {
+  margin-top: 18px;
+  padding: 12px;
+  background: #eee5ff;
+  color: #542da4;
+  border-radius: 10px;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1.5;
+}
+
+.login-note {
+  margin-top: 20px;
+  font-size: 13px;
+  color: #81798f;
+}
+
+
+/* ABOUT */
+
+.about {
+  padding: 85px 15%;
+  text-align: center;
+  background: white;
+}
+
+.about h2 {
+  margin-bottom: 20px;
+}
+
+.about-text {
+  max-width: 750px;
+  margin: auto;
+  font-size: 18px;
+  line-height: 1.8;
+  color: #686273;
+}
+
+
+/* FOOTER */
+
+footer {
+  padding: 35px 20px;
+  text-align: center;
+  background: #302642;
+  color: white;
+}
+
+.footer-logo {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+footer p {
+  margin-bottom: 8px;
+}
+
+.copyright {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+
+/* MOBILE */
+
+@media (max-width: 900px) {
+
+  .nav-links {
+    gap: 15px;
+  }
+
+  .nav-links a {
+    font-size: 13px;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .scam-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+}
+
+
+@media (max-width: 768px) {
+
+  .navbar {
+    padding: 0 5%;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .nav-links {
+    display: none;
+  }
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+    padding: 60px 5%;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+  }
+
+  .description {
+    font-size: 16px;
+  }
+
+  .buttons {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero-card {
+    width: 100%;
+    max-width: 350px;
+  }
+
+  .features,
+  .tools-section,
+  .emergency-section {
+    padding: 65px 5%;
+  }
+
+  .features h2,
+  .tools-section h2,
+  .emergency-section h2,
+  .about h2 {
+    font-size: 30px;
+  }
+
+  .feature-card {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .threat-checker,
+  .password-checker,
+  .scam-card,
+  .report-form {
+    padding: 30px 20px;
+  }
+
+  .scam-container {
+    grid-template-columns: 1fr;
+  }
+
+  .emergency-card {
+    width: 100%;
+    max-width: 330px;
+  }
+
+  .about {
+    padding: 60px 8%;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .login-section {
+    padding: 70px 5%;
+  }
+
+  .login-box {
+    width: 100%;
+    max-width: 400px;
+    padding: 35px 25px;
+  }
+
+}
